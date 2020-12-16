@@ -4,6 +4,7 @@
 
 #cursor active at boot
 xsetroot -cursor_name left_ptr &
+/usr/share/multiple-monitors.sh &
 
 #starting utility applications at boot time
 nm-applet &

@@ -118,7 +118,7 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 font-4 = "FontAwesome5Brands:size=13;0"
 
-modules-left = ewmh xwindow
+modules-left = ewmh
 modules-center = kernel
 modules-right = pavolume networkspeeddown networkspeedup memory2 cpu2 filesystem date
 
