@@ -3,7 +3,7 @@ set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "code"                      # $EDITOR
 set VISUAL "code"                      # $VISUAL
-set TERMINAL "gnome-terminal"          # Terminal
+set TERMINAL "alacritty"               # Terminal
 set LANG "en_US.UTF-8"                 # Language
 set LC_ALL "en_US.UTF-8"               # LC_ALL
 
