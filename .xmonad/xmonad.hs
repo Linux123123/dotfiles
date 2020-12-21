@@ -151,10 +151,10 @@ myKeys =
         , ("M-S-p", spawn myEditor)
         , ("M-S-b", spawn myBrowser)
         , ("M-S-d", spawn "discord")
-        , ("M-S-m", spawn "youtube-music")
+        , ("M-S-m", spawn "$HOME/Applications/youtube-music.sh")
 
     -- Language
-        , ("M-S-o", spawn "layout_switch.sh")
+        , ("M-S-o", spawn "$HOME/.local/bin/layout_switch")
 
     -- Multimedia Keys
         , ("<XF86AudioPlay>", spawn "playerctl play-pause")
@@ -168,10 +168,6 @@ myKeys =
 
 main :: IO ()
 main = do
-    -- Launching two instances of xmobar on their monitors.
-    -- xmproc0 <- spawnPipe "xmobar -x 0 /home/linux123123/.config/xmobar/xmobarrc0"
-    -- xmproc1 <- spawnPipe "xmobar -x 1 /home/linux123123/.config/xmobar/xmobarrc1"
-
     -- the xmonad, ya know...what the WM is named after!
     xmonad $ ewmh def
         { manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageDocks
