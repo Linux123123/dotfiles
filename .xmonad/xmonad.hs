@@ -151,7 +151,7 @@ myKeys =
         , ("M-S-p", spawn myEditor)
         , ("M-S-b", spawn myBrowser)
         , ("M-S-d", spawn "discord")
-        , ("M-S-m", spawn "$HOME/Applications/youtube-music.sh")
+        , ("M-S-m", spawn "exec $HOME/Applications/YouTube-Music-1.8.0.AppImage")
 
     -- Language
         , ("M-S-o", spawn "$HOME/.local/bin/layout_switch")
