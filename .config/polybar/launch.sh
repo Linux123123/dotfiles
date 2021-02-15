@@ -1,24 +1,35 @@
-#!/usr/bin/env sh
+#!/bin/bash
+# Detect if secondary monitor is connected, if so, add a specific bar and move tray to it
+# Else, keep tray on main monitor
+# see https://github.com/polybar/polybar/issues/763
 
-# More info : https://github.com/jaagr/polybar/wiki
-
-# Install the following applications for polybar and icons in polybar if you are on ArcoLinuxD
-# awesome-terminal-fonts
-# Tip : There are other interesting fonts that provide icons like nerd-fonts-complete
-
-# Terminate already running bar instances
 killall -q polybar
 
 # Wait until the processes have been shut down
-while pgrep -u "$UID" -x polybar > /dev/null; do sleep 1; done
+while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 
-count=$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)
+outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
+set -- $outputs
+tray_output=$1
 
-if [ "$count" = 1 ]; then
-  m=$(xrandr --query | grep " connected" | cut -d" " -f1)
-  MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
-else
-  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+  for m in $outputs; do
+    if [ $m == $1 ] 
+    then		
+      MONITOR1=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &	
+    elif [ $m == $2 ]
+    then
+        tray_output=$m
+      MONITOR2=$m polybar --reload second-bar-xmonad -c ~/.config/polybar/config &
+    else
+      MONITOR1=$m polybar --reload mainbar-xmonad -c ~/.config/polybar/config &
+    fi
   done
-fi
+
+  for m in $outputs; do
+    export MONITOR1=$1
+    export MONITOR2=$2
+    export TRAY_POSITION=none
+    if [[ $m == $tray_output ]]; then
+        TRAY_POSITION=right
+  fi
+done
