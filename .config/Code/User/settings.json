@@ -14,7 +14,6 @@
     "editor.fontFamily": "Fira Code, monospace",
     "editor.fontWeight": "450",
     "editor.fontLigatures": true,
-    "editor.formatOnSave": true,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "diffEditor.ignoreTrimWhitespace": false,
@@ -34,5 +33,12 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.fontSize": 16,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "craftos-pc.executablePath.windows": "C:\\Program Files\\CraftOS-PC\\CraftOS-PC.exe",
+    "shellcheck.executablePath": "shellcheck",
+    "editor.formatOnSave": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
