@@ -9,7 +9,6 @@
     "workbench.startupEditor": "newUntitledFile",
     "shellcheck.disableVersionCheck": false,
     "shellcheck.exclude": ["SC1091", "SC1071"],
-    "window.zoomLevel": 0,
     "window.autoDetectColorScheme": true,
     "editor.fontFamily": "Fira Code, monospace",
     "editor.fontWeight": "450",
@@ -17,11 +16,9 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "terminal.integrated.shell.linux": "/bin/fish",
+    "terminal.integrated.defaultProfile.linux": "/bin/fish",
     "files.autoSave": "afterDelay",
     "settingsSync.keybindingsPerPlatform": false,
-    "prettier.tabWidth": 4,
-    "prettier.singleQuote": true,
     "explorer.confirmDelete": false,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -34,11 +31,23 @@
     },
     "editor.fontSize": 16,
     "explorer.confirmDragAndDrop": false,
-    "craftos-pc.executablePath.windows": "C:\\Program Files\\CraftOS-PC\\CraftOS-PC.exe",
     "shellcheck.executablePath": "shellcheck",
     "editor.formatOnSave": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "php.validate.executablePath": "/usr/bin/php7",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.quoteProps": "consistent",
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "git.ignoreRebaseWarning": true,
+    "editor.lineNumbers": "on",
+    "tabnine.experimentalAutoImports": true
 }

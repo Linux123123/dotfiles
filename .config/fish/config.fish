@@ -1,4 +1,4 @@
-set -U fish_user_paths $fish_user_paths $HOME/.local/bin/
+set -U fish_user_paths $fish_user_paths $HOME/.local/bin/ (yarn global bin)
 set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "code"                      # $EDITOR
@@ -33,6 +33,9 @@ alias ls='exa -al --color=always --group-directories-first' # my preferred listi
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
+
+# Change cat to bat
+alias cat='bat'
 
 # pacman and yay
 alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs

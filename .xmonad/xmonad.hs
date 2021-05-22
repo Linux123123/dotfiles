@@ -150,8 +150,9 @@ myKeys =
     --- My Applications (Super+Alt+Key)
         , ("M-S-p", spawn myEditor)
         , ("M-S-b", spawn myBrowser)
-        , ("M-S-d", spawn "discord")
+        , ("M-S-d", spawn "discord --no-sandbox")
         , ("M-S-m", spawn "exec $HOME/Applications/youtube-music.AppImage")
+        , ("M-S-g", spawn "exec $HOME/Applications/GoogleAssistant.AppImage")
 
     -- Language
         , ("M-S-o", spawn "$HOME/.local/bin/layout_switch")

@@ -15,4 +15,5 @@ numlockx on &
 /usr/bin/xfce4-clipman &
 /usr/bin/flameshot &
 /home/linux123123/.local/bin/hyperion-x11 -a 192.168.0.130:19400 --crop-top 60 --crop-bottom 20 --crop-left 30 --crop-right 30 &
+exec $HOME/Applications/GoogleAssistant.AppImage &
 nitrogen --restore &
