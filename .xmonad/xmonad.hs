@@ -54,7 +54,7 @@ myTerminal :: String
 myTerminal = "alacritty"   -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "google-chrome-stable"  -- Sets chrome as browser for tree select
+myBrowser = "brave"  -- Sets brave as browser for tree select
 
 myEditor :: String
 myEditor = "code"  -- Sets code as editor for tree select
@@ -151,7 +151,7 @@ myKeys =
         , ("M-S-p", spawn myEditor)
         , ("M-S-b", spawn myBrowser)
         , ("M-S-d", spawn "discord --no-sandbox")
-        , ("M-S-m", spawn "exec $HOME/Applications/youtube-music.AppImage")
+        , ("M-S-m", spawn "youtube-music")
         , ("M-S-g", spawn "exec $HOME/Applications/GoogleAssistant.AppImage")
 
     -- Language

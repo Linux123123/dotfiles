@@ -76,8 +76,8 @@ volume-max = #bf616a
 
 [bar/mainbar-xmonad]
 monitor = ${env:MONITOR1}
-tray-position = ${env:TRAY_POSITION:right}
-;monitor-fallback = HDMI4
+tray-position = none
+monitor-fallback = HDMI4
 monitor-strict = false
 override-redirect = false
 width = 100%
@@ -139,7 +139,7 @@ tray-background = ${colors.background}
 
 [bar/second-bar-xmonad]
 monitor = ${env:MONITOR2}
-tray-position = ${env:TRAY_POSITION:right}
+tray-position = right
 ;monitor-fallback = VGA-1
 monitor-strict = false
 override-redirect = false

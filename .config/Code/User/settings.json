@@ -16,38 +16,36 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "terminal.integrated.defaultProfile.linux": "/bin/fish",
     "files.autoSave": "afterDelay",
     "settingsSync.keybindingsPerPlatform": false,
     "explorer.confirmDelete": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
     "explorer.confirmDragAndDrop": false,
     "shellcheck.executablePath": "shellcheck",
     "editor.formatOnSave": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
     },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "php.validate.executablePath": "/usr/bin/php7",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "php.validate.executablePath": "/usr/bin/php",
     "prettier.quoteProps": "consistent",
     "prettier.singleQuote": true,
     "prettier.tabWidth": 4,
     "git.ignoreRebaseWarning": true,
     "editor.lineNumbers": "on",
-    "tabnine.experimentalAutoImports": true
+    "security.workspace.trust.untrustedFiles": "open",
+    "eslint.alwaysShowStatus": true,
+    "javascript.format.enable": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.autocomplete.enable": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": true
+    }
 }

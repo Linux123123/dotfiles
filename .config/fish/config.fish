@@ -1,4 +1,4 @@
-set -U fish_user_paths $fish_user_paths $HOME/.local/bin/ (yarn global bin)
+set -U fish_user_paths $fish_user_paths $HOME/.local/bin/ $HOME/.config/composer/vendor/bin (yarn global bin)
 set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "code"                      # $EDITOR
@@ -20,6 +20,9 @@ function backup --argument filename
 end
 
 ### ALIASES ###
+# doas as sudo
+alias sudo='doas --'
+
 # navigation
 alias ..='cd ..' 
 alias ...='cd ../..'
