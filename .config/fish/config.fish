@@ -1,4 +1,7 @@
-set -U fish_user_paths $fish_user_paths $HOME/.local/bin/ $HOME/.config/composer/vendor/bin (yarn global bin)
+set -Ux JAVA_HOME /usr/lib/jvm/java-10-jdk
+set -Ux ANDROID_SDK_ROOT $HOME/Android/Sdk
+set -Ux JAVA_OPTS '-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+set -U fish_user_paths $fish_user_paths $HOME/.local/bin/ $HOME/.config/composer/vendor/bin (yarn global bin) $ANDROID_HOME/emulator $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools
 set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "code"                      # $EDITOR
@@ -76,3 +79,7 @@ alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
 colorscript random
 starship init fish | source
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true

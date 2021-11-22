@@ -54,7 +54,7 @@ myTerminal :: String
 myTerminal = "alacritty"   -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "brave"  -- Sets brave as browser for tree select
+myBrowser = "chromium"  -- Sets brave as browser for tree select
 
 myEditor :: String
 myEditor = "code"  -- Sets code as editor for tree select
@@ -102,12 +102,12 @@ myManageHook :: XMonad.Query (Data.Monoid.Endo WindowSet)
 myManageHook = composeAll . concat $
     [ [isDialog --> doCenterFloat]
     , [className =? c --> doCenterFloat | c <- myCFloats]
-    , [title =? t --> doFloat | t <- myTFloats]
+    , [title =? t --> doCenterFloat | t <- myTFloats]
     , [resource =? r --> doFloat | r <- myRFloats]
     , [resource =? i --> doIgnore | i <- myIgnores]
     ]
     where
-    myCFloats = ["Arandr", "feh"]
+    myCFloats = ["Arandr", "feh", "confirm", "dialog", "error"]
     myTFloats = ["Downloads", "Save As..."]
     myRFloats = ["gnome-calculator"]
     myIgnores = ["desktop_window"]
@@ -122,7 +122,7 @@ myKeys =
         , ("M-<Return>", spawn myTerminal)
 
     -- Run Prompt
-        , ("M-S-<Return>", spawn "rofi -show run")   -- Shell Prompt
+        , ("M-S-<Return>", spawn "rofi -show combi")   -- Shell Prompt
 
     -- Windows
         , ("M-S-c", kill1)                           -- Kill the currently focused client
@@ -170,13 +170,13 @@ myKeys =
 main :: IO ()
 main = do
     -- the xmonad, ya know...what the WM is named after!
-    xmonad $ ewmh def
+    xmonad $ ewmh $ def
         { manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageDocks
         , modMask            = myModMask
         , handleEventHook    = fullscreenEventHook
         , terminal           = myTerminal
         , startupHook        = myStartupHook
-        , layoutHook         = gaps [(U,35), (D,5), (R,5), (L,5)] $ myLayoutHook
+        , layoutHook         = gaps [(U,35), (D,5), (R,5), (L,5)] myLayoutHook
         , workspaces         = myWorkspaces
         , borderWidth        = myBorderWidth
         , normalBorderColor  = myNormColor

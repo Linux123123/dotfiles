@@ -121,7 +121,7 @@ font-4 = "FontAwesome5Brands:size=13;0"
 
 modules-left = ewmh
 modules-center = kernel
-modules-right = pavolume date
+modules-right = pipewire date
 
 tray-detached = false
 tray-offset-x = 0
@@ -413,18 +413,20 @@ format-connected-underline = #3EC13F
 
 ################################################################################
 
-[module/pavolume]
+[module/pipewire]
 type = custom/script
-tail = true
-label = %output%
-exec = ~/.config/polybar/scripts/pavolume.sh --listen
-click-right = exec pavucontrol
-click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
-scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+label = "%output%"
+label-font = 1
+interval = 2.0
+exec = ~/.config/polybar/scripts/pipewire.sh
+click-right = exec pavucontrol &
+click-left = ~/.config/polybar/scripts/pipewire.sh mute &
+scroll-up = ~/.config/polybar/scripts/pipewire.sh up &
+scroll-down = ~/.config/polybar/scripts/pipewire.sh down &
 format-underline = #3EC13F
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+tail = true
 
 ################################################################################
 
