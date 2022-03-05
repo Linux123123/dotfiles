@@ -60,7 +60,7 @@ myEditor :: String
 myEditor = "code"  -- Sets code as editor for tree select
 
 myBorderWidth :: Dimension
-myBorderWidth = 2          -- Sets border width for windows
+myBorderWidth = 1          -- Sets border width for windows
 
 myNormColor :: String
 myNormColor   = "#292d3e"  -- Border color of normal windows
@@ -158,12 +158,15 @@ myKeys =
         , ("M-S-o", spawn "$HOME/.local/bin/layout_switch")
 
     -- Multimedia Keys
-        , ("<XF86AudioPlay>", spawn "playerctl play-pause")
         , ("M-S-<L>", spawn "playerctl previous")
         , ("M-S-<R>", spawn "playerctl next")
-        , ("<XF86AudioMute>", spawn "amixer -q set Master toggle")
-        , ("<XF86AudioLowerVolume>", spawn "amixer -q set Master 5%- unmute")
-        , ("<XF86AudioRaiseVolume>", spawn "amixer -q set Master 5%+ unmute")
+        , ("<XF86AudioMute>", spawn "pactl set-sink-mute 0 toggle")
+        , ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume 0 -1.5%")
+        , ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume 0 +1.5%")
+        , ("<XF86AudioPlay>", spawn "playerctl play-pause")
+        , ("XF86AudioNext", spawn "playerctl next")
+        , ("XF86AudioPrev", spawn "playerctl previous")
+        , ("<XF86AudioStop>", spawn "playerctl stop")
         , ("<XF86Calculator>", spawn "gnome-calculator")
         ]
 

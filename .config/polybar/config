@@ -183,8 +183,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 font-4 = "FontAwesome5Brands:size=13;0"
 
 modules-left = ewmh
-modules-center = kernel
-modules-right = pavolume networkspeeddown networkspeedup memory2 cpu2 filesystem date
+modules-right = pavolume networkspeeddown networkspeedup memory swap filesystem cpu date
 
 tray-detached = false
 tray-offset-x = 0
@@ -200,7 +199,7 @@ tray-background = ${colors.background}
 ################################################################################
 ################################################################################
 
-[module/cpu2]
+[module/cpu]
 ;https://github.com/jaagr/polybar/wiki/Module:-cpu
 type = internal/cpu
 ; Seconds to sleep between updates
@@ -361,22 +360,26 @@ format-underline = #0084FF
 
 ################################################################################
 
-[module/memory2]
-;https://github.com/jaagr/polybar/wiki/Module:-memory
+[module/memory]
 type = internal/memory
 interval = 1
-; Available tokens:
-;   %percentage_used% (default)
-;   %percentage_free%
-;   %gb_used%
-;   %gb_free%
-;   %gb_total%
-;   %mb_used%
-;   %mb_free%
-;   %mb_total%
-label = %percentage_used%%
+label = %gb_used%/%gb_total%
 
 format = Mem <label>
+format-prefix = "  "
+format-prefix-foreground = #3384d0
+format-underline = #3384d0
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+################################################################################
+
+[module/swap]
+type = internal/memory
+interval = 1
+label = %gb_swap_used%%/%gb_swap_total%
+
+format = Swap <label>
 format-prefix = "  "
 format-prefix-foreground = #3384d0
 format-underline = #3384d0

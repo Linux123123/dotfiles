@@ -1,9 +1,7 @@
 {
     "workbench.preferredDarkColorTheme": "Atom One Dark",
     "workbench.preferredLightColorTheme": "Atom One Light",
-    "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.productIconTheme": "fluent-icons",
     "workbench.startupEditor": "none",
     "editor.fontFamily": "Fira Code, monospace",
     "editor.fontSize": 16,
@@ -11,7 +9,6 @@
     "editor.fontLigatures": true,
     "editor.lineNumbers": "on",
     "editor.bracketPairColorization.enabled": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.inlineSuggest.enabled": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
@@ -23,9 +20,6 @@
     "git.ignoreRebaseWarning": true,
     "shellcheck.exclude": ["SC1091", "SC1071"],
     "shellcheck.executablePath": "shellcheck",
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "diffEditor.ignoreTrimWhitespace": false,
     "files.autoSave": "afterDelay",
     "settingsSync.keybindingsPerPlatform": false,
     "explorer.confirmDelete": false,
@@ -40,17 +34,30 @@
     "github.copilot.enable": {
         "*": true,
         "yaml": true,
-        "plaintext": false,
+        "plaintext": true,
         "markdown": true,
-        "graphql": false
+        "graphql": true
     },
     "vsicons.dontShowNewVersionMessage": true,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
     },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[php]": {
+        "editor.defaultFormatter": "mhillmann.php-ide"
+    },
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "rust-client.updateOnStartup": true,
+    "rust.all_features": true,
+    "[rust]": {
+        "editor.defaultFormatter": "statiolake.vscode-rustfmt"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    }
 }
