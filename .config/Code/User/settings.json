@@ -1,63 +1,60 @@
 {
-    "workbench.preferredDarkColorTheme": "Atom One Dark",
-    "workbench.preferredLightColorTheme": "Atom One Light",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "none",
-    "editor.fontFamily": "Fira Code, monospace",
-    "editor.fontSize": 16,
-    "editor.fontWeight": "600",
-    "editor.fontLigatures": true,
-    "editor.lineNumbers": "on",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.inlineSuggest.enabled": true,
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "git.enableCommitSigning": true,
-    "git.ignoreRebaseWarning": true,
-    "shellcheck.exclude": ["SC1091", "SC1071"],
-    "shellcheck.executablePath": "shellcheck",
-    "files.autoSave": "afterDelay",
-    "settingsSync.keybindingsPerPlatform": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "php.validate.executablePath": "/usr/bin/php",
-    "prettier.quoteProps": "consistent",
-    "prettier.singleQuote": true,
-    "prettier.tabWidth": 4,
-    "security.workspace.trust.untrustedFiles": "open",
-    "javascript.format.enable": false,
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": true,
-        "plaintext": true,
-        "markdown": true,
-        "graphql": true
-    },
-    "vsicons.dontShowNewVersionMessage": true,
-    "editor.suggestSelection": "first",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "diffEditor.ignoreTrimWhitespace": false,
-    "[php]": {
-        "editor.defaultFormatter": "mhillmann.php-ide"
-    },
-    "workbench.colorTheme": "Atom One Dark",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "rust-client.updateOnStartup": true,
-    "rust.all_features": true,
-    "[rust]": {
-        "editor.defaultFormatter": "statiolake.vscode-rustfmt"
-    },
-    "[c]": {
-        "editor.defaultFormatter": "xaver.clang-format"
-    }
+  "workbench.preferredDarkColorTheme": "Atom One Dark",
+  "workbench.preferredLightColorTheme": "Atom One Light",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  "editor.fontFamily": "Fira Code, monospace",
+  "editor.fontSize": 16,
+  "editor.fontWeight": "600",
+  "editor.fontLigatures": true,
+  "editor.lineNumbers": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableCommitSigning": true,
+  "git.ignoreRebaseWarning": true,
+  "shellcheck.exclude": ["SC1091", "SC1071"],
+  "shellcheck.executablePath": "shellcheck",
+  "files.autoSave": "afterDelay",
+  "settingsSync.keybindingsPerPlatform": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "php.validate.executablePath": "/usr/bin/php",
+  "security.workspace.trust.untrustedFiles": "open",
+  "javascript.format.enable": false,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "graphql": true
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[php]": {
+    "editor.defaultFormatter": "mhillmann.php-ide"
+  },
+  "workbench.colorTheme": "Atom One Dark",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "rust-client.updateOnStartup": true,
+  "rust.all_features": true,
+  "[rust]": {
+    "editor.defaultFormatter": "statiolake.vscode-rustfmt"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  }
 }
