@@ -56,5 +56,6 @@
   },
   "[c]": {
     "editor.defaultFormatter": "xaver.clang-format"
-  }
+  },
+  "comment-divider.length": 50
 }
