@@ -1,7 +1,7 @@
 {
   "workbench.preferredDarkColorTheme": "Atom One Dark",
   "workbench.preferredLightColorTheme": "Atom One Light",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "icons",
   "workbench.startupEditor": "none",
   "editor.fontFamily": "Fira Code, monospace",
   "editor.fontSize": 16,
@@ -57,5 +57,7 @@
   "[c]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
-  "comment-divider.length": 50
+  "comment-divider.length": 50,
+  "workbench.productIconTheme": "fluent-icons",
+  "githubPullRequests.createOnPublishBranch": "never"
 }
