@@ -1,7 +1,6 @@
 {
   "workbench.preferredDarkColorTheme": "Atom One Dark",
-  "workbench.preferredLightColorTheme": "Atom One Light",
-  "workbench.iconTheme": "icons",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
   "editor.fontFamily": "Fira Code, monospace",
   "editor.fontSize": 16,
@@ -35,7 +34,6 @@
     "markdown": true,
     "graphql": true
   },
-  "vsicons.dontShowNewVersionMessage": true,
   "editor.suggestSelection": "first",
   "files.exclude": {
     "**/.classpath": true,
@@ -44,20 +42,25 @@
     "**/.factorypath": true
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  "[php]": {
-    "editor.defaultFormatter": "mhillmann.php-ide"
-  },
   "workbench.colorTheme": "Atom One Dark",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "rust-client.updateOnStartup": true,
-  "rust.all_features": true,
-  "[rust]": {
-    "editor.defaultFormatter": "statiolake.vscode-rustfmt"
-  },
-  "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
   "comment-divider.length": 50,
   "workbench.productIconTheme": "fluent-icons",
-  "githubPullRequests.createOnPublishBranch": "never"
+  "telemetry.telemetryLevel": "off",
+  "gitlens.statusBar.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "git.enableSmartCommit": true,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "files.associations": {
+    ".env.prod": "env"
+  },
+  "debug.javascript.autoAttachFilter": "disabled",
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  }
 }
