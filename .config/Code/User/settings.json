@@ -62,5 +62,6 @@
   },
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  }
+  },
+  "vim.useSystemClipboard": true
 }

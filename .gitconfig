@@ -1,7 +1,7 @@
 [user]
 	name = Linux123123
 	email = me@linux123123.com
-	signingkey = F9897846F7BCB30B2E49C39B1B94ABF538F5129A
+	signingkey = 95F59F26EA4B118A5BBFDCBB01CCB9B1928F8E06
 [core]
 	editor = code
 [color]

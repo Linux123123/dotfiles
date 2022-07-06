@@ -1,4 +1,4 @@
-set -U fish_user_paths $fish_user_paths $HOME/.local/bin/ (yarn global bin)
+set -U fish_user_paths $fish_user_paths $HOME/.local/bin/ (yarn global bin) $HOME/.config/composer/vendor/bin
 set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "code"                      # $EDITOR
@@ -34,7 +34,12 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
-alias beak='/home/linux123123/Github/ptero-dev-v1/beak'
+alias beak='cd /home/linux123123/Github/ptero-dev'
+
+function beak --wraps beak
+    cd /home/linux123123/Github/ptero-dev/
+    ./beak $argv
+end
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -53,5 +58,3 @@ alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
 starship init fish | source
 
-# Brew
-eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
