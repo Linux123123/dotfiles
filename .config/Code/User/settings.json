@@ -63,5 +63,45 @@
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
-  "vim.useSystemClipboard": true
+  "vim.useSystemClipboard": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.renderColons": false,
+  "terminal.integrated.scrollback": 10000,
+  "[shellscript]": {
+    "editor.defaultFormatter": "shakram02.bash-beautify"
+  },
+  "bashBeautify.tabSize": 2,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "typescript",
+    "typescriptreact",
+    "mdx"
+  ],
+  "discord.detailsEditing": "Editing {current_line} of {total_lines}. None of your business",
+  "discord.detailsDebugging": "I am not debugging. No bugs",
+  "discord.detailsIdling": "Not idling. Working very hard.",
+  "discord.largeImage": "Editing a {LANG} file. But i don't know {lang}",
+  "discord.largeImageIdling": "Not idling. Working very hard.",
+  "discord.lowerDetailsDebugging": "I am not debugging. No bugs",
+  "discord.lowerDetailsEditing": "404 Get Out",
+  "discord.lowerDetailsIdling": "Not idling. Working very hard.",
+  "discord.lowerDetailsNoWorkspaceFound": "404 Get Out",
+  "discord.smallImage": "1.0.0-archnobugs-release-69",
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

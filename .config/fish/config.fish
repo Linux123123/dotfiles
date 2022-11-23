@@ -1,4 +1,6 @@
-set -U fish_user_paths $fish_user_paths $HOME/.local/bin/ (yarn global bin) $HOME/.config/composer/vendor/bin
+# set -x ANDROID_SDK_ROOT $HOME/Android/Sdk
+# fish_add_path $ANDROID_SDK_ROOT/emulator $ANDROID_SDK_ROOT/platform-tools
+# fish_add_path $fish_user_paths $HOME/.local/bin/ (yarn global bin) $HOME/.config/composer/vendor/bin
 set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "code"                      # $EDITOR
@@ -54,7 +56,7 @@ alias free='free -m'                      # show sizes in MB
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # bare git repo alias for dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 starship init fish | source
 
