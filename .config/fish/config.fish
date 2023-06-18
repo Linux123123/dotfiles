@@ -1,6 +1,6 @@
-# set -x ANDROID_SDK_ROOT $HOME/Android/Sdk
-# fish_add_path $ANDROID_SDK_ROOT/emulator $ANDROID_SDK_ROOT/platform-tools
-# fish_add_path $fish_user_paths $HOME/.local/bin/ (yarn global bin) $HOME/.config/composer/vendor/bin
+set -x ANDROID_SDK_ROOT $HOME/Android/Sdk
+fish_add_path $ANDROID_SDK_ROOT/emulator $ANDROID_SDK_ROOT/platform-tools
+fish_add_path $fish_user_paths $HOME/.local/bin/
 set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "code"                      # $EDITOR
@@ -39,8 +39,7 @@ alias grep='grep --color=auto'
 alias beak='cd /home/linux123123/Github/ptero-dev'
 
 function beak --wraps beak
-    cd /home/linux123123/Github/ptero-dev/
-    ./beak $argv
+    /home/linux123123/Github/ptero-dev/beak $argv
 end
 
 # confirm before overwriting something
