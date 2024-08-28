@@ -1,112 +1,68 @@
 {
-  "workbench.preferredDarkColorTheme": "Atom One Dark",
+  // Workbench
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.preferredDarkColorTheme": "Atom One Dark",
+  "workbench.preferredLightColorTheme": "Atom One Light",
+  // Editor
   "editor.fontFamily": "Fira Code, monospace",
   "editor.fontSize": 16,
   "editor.fontWeight": "600",
   "editor.fontLigatures": true,
-  "editor.lineNumbers": "on",
   "editor.bracketPairColorization.enabled": true,
-  "editor.inlineSuggest.enabled": true,
-  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-  "git.confirmSync": false,
-  "git.autofetch": true,
-  "git.enableCommitSigning": true,
-  "git.ignoreRebaseWarning": true,
-  "shellcheck.exclude": ["SC1091", "SC1071"],
-  "shellcheck.executablePath": "shellcheck",
-  "files.autoSave": "afterDelay",
-  "settingsSync.keybindingsPerPlatform": false,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "php.validate.executablePath": "/usr/bin/php",
-  "security.workspace.trust.untrustedFiles": "open",
-  "javascript.format.enable": false,
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
-    "plaintext": true,
-    "markdown": true,
-    "graphql": true
-  },
-  "editor.suggestSelection": "first",
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
-  "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.colorTheme": "Atom One Dark",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "comment-divider.length": 50,
-  "workbench.productIconTheme": "fluent-icons",
+  "editor.linkedEditing": true,
+  // Disable telemetry
   "telemetry.telemetryLevel": "off",
-  "gitlens.statusBar.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "git.enableSmartCommit": true,
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "files.associations": {
-    ".env.prod": "env"
-  },
-  "debug.javascript.autoAttachFilter": "disabled",
-  "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  },
-  "vim.useSystemClipboard": true,
-  "rust-analyzer.inlayHints.chainingHints.enable": false,
-  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
-  "rust-analyzer.inlayHints.typeHints.enable": false,
-  "rust-analyzer.inlayHints.parameterHints.enable": false,
-  "rust-analyzer.inlayHints.renderColons": false,
-  "terminal.integrated.scrollback": 10000,
-  "[shellscript]": {
-    "editor.defaultFormatter": "shakram02.bash-beautify"
-  },
-  "bashBeautify.tabSize": 2,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "astro",
-    "typescript",
-    "typescriptreact",
-    "mdx"
-  ],
-  "discord.detailsEditing": "Editing {current_line} of {total_lines}. None of your business",
+  // Discord
+  "discord.detailsEditing": "Line {current_line} of {total_lines}. None of your business",
   "discord.detailsDebugging": "I am not debugging. No bugs",
   "discord.detailsIdling": "Not idling. Working very hard.",
   "discord.largeImage": "Editing a {LANG} file. But i don't know {lang}",
   "discord.largeImageIdling": "Not idling. Working very hard.",
   "discord.lowerDetailsDebugging": "I am not debugging. No bugs",
-  "discord.lowerDetailsEditing": "404 Get Out",
+  "discord.lowerDetailsEditing": "Get Out",
   "discord.lowerDetailsIdling": "Not idling. Working very hard.",
-  "discord.lowerDetailsNoWorkspaceFound": "404 Get Out",
+  "discord.lowerDetailsNoWorkspaceFound": "Get Out",
   "discord.smallImage": "1.0.0-archnobugs-release-69",
-  "[c]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+  "discord.removeRemoteRepository": true,
+  // Git
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // Format assosiations
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
   },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+
+  // Explorer and files
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "afterDelay",
+
+  // Ignore recommendations
+  "extensions.ignoreRecommendations": true,
+
+  // Terminal
+  "terminal.integrated.scrollback": 10000,
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.confirmSaveUntitledWorkspace": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnType": true,
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
   },
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  "github.copilot.editor.enableAutoCompletions": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "diffEditor.renderSideBySide": true,
+  "editor.formatOnSave": true,
+  "[php]": {
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "githubPullRequests.pullBranch": "never",
-  "terminal.integrated.enableMultiLinePasteWarning": false
+  "diffEditor.ignoreTrimWhitespace": false
 }
