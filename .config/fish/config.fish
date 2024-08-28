@@ -1,6 +1,3 @@
-set -x ANDROID_SDK_ROOT $HOME/Android/Sdk
-fish_add_path $ANDROID_SDK_ROOT/emulator $ANDROID_SDK_ROOT/platform-tools
-fish_add_path $fish_user_paths $HOME/.local/bin/
 set fish_greeting                      # Supresses fish's intro message
 set TERM "xterm-256color"              # Sets the terminal type
 set EDITOR "code"                      # $EDITOR
@@ -9,24 +6,9 @@ set TERMINAL "alacritty"               # Terminal
 set LANG "en_US.UTF-8"                 # Language
 set LC_ALL "en_US.UTF-8"               # LC_ALL
 
-### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
-set fish_color_normal brcyan
-set fish_color_autosuggestion '#7d7d7d'
-set fish_color_command brcyan
-set fish_color_error '#ff6c6b'
-set fish_color_param brcyan
-
 ### ALIASES ###
 # doas as sudo
 alias sudo='doas --'
-
-# navigation
-alias ..='cd ..' 
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
@@ -36,10 +18,23 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
+
 alias beak='cd /home/linux123123/Github/ptero-dev'
 
 function beak --wraps beak
     /home/linux123123/Github/ptero-dev/beak $argv
+end
+
+alias emh='cd /home/linux123123/Github/emh-dev'
+
+function emh --wraps emh
+    /home/linux123123/Github/emh-dev/beak $argv
+end
+
+alias sparked='cd /home/linux123123/Github/sparked-dev'
+
+function sparked --wraps sparked
+    /home/linux123123/Github/sparked-dev/beak $argv
 end
 
 # confirm before overwriting something
@@ -54,8 +49,4 @@ alias free='free -m'                      # show sizes in MB
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
-# bare git repo alias for dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-
 starship init fish | source
-
